@@ -3,13 +3,13 @@ function fibs(num) {
   if (num === 1) return [0];
   if (num === 2) return [0, 1];
 
-  const result = [0, 1];
+  let array = [0, 1];
 
   for (let i = 2; i < num; i++) {
-    result.push(result[i - 1] + result[i - 2]);
+    array.push(array[i - 1] + array[i - 2]);
   }
 
-  return result;
+  return array;
 }
 
 function fibsRec(num) {
@@ -17,16 +17,12 @@ function fibsRec(num) {
   if (num === 1) return [0];
   if (num === 2) return [0, 1];
 
-  const sequence = fibsRec(num - 1);
+  let array = fibsRec(num - 1);
 
-  const nextNumber =
-    sequence[sequence.length - 1] + sequence[sequence.length - 2];
-  sequence.push(nextNumber);
+  let nextNum = array[array.length - 1] + array[array.length - 2];
+  array.push(nextNum);
 
-  console.log(sequence);
-
-  return sequence;
+  return array;
 }
-
 // console.log(fibs(8));
 console.log(fibsRec(8));
