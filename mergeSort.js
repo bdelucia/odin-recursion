@@ -29,4 +29,4 @@ function merge(leftArray, rightArray) {
   return mergedArray.concat(leftArray.slice(i)).concat(rightArray.slice(j));
 }
 
-console.log(mergeSort([5, 3, 1, 4, 2]));
+console.log(mergeSort([5, 3, 1, 4, 2, 7, 1, 10, 4, 13]));
