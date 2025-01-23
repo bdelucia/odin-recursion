@@ -23,8 +23,10 @@ function fibsRec(num) {
     sequence[sequence.length - 1] + sequence[sequence.length - 2];
   sequence.push(nextNumber);
 
+  console.log(sequence);
+
   return sequence;
 }
 
-console.log(fibs(8));
+// console.log(fibs(8));
 console.log(fibsRec(8));
